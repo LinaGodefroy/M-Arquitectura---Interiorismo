@@ -49,7 +49,8 @@
 
   <main>
     <!-- Hero: imagen + breadcrumb + título superpuestos, como en normcph.com -->
-    <div class="relative w-full aspect-[4/5] md:aspect-[16/9] bg-taupe/40">
+    <div class="relative w-full aspect-[4/5] md:aspect-[16/9] overflow-hidden">
+      <img src="/images/mockups/proyectos/01-a.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-leather/70 via-leather/10 to-transparent"></div>
       <div class="absolute inset-x-0 bottom-0 px-6 md:px-10 pb-10 text-leather">
         <p class="text-xs uppercase tracking-[0.2em] mb-3">Arquitectura · Residencial</p>
@@ -107,17 +108,17 @@
       <p class="text-center text-xs uppercase tracking-[0.2em] text-nickel mb-10 reveal">Materialidad</p>
       <div class="grid grid-cols-3 gap-4 md:gap-6" data-reveal-group>
         <div class="reveal">
-          <div class="aspect-square bg-khaki mb-2"></div>
+          <div class="aspect-square mb-2 overflow-hidden"><img src="/images/mockups/materiales/roble.jpg" alt="" class="w-full h-full object-cover" /></div>
           <div class="h-8 bg-taupe"></div>
           <p class="text-xs uppercase tracking-[0.15em] mt-2 text-center">Roble natural</p>
         </div>
         <div class="reveal">
-          <div class="aspect-square bg-froth border border-khaki mb-2"></div>
+          <div class="aspect-square mb-2 overflow-hidden"><img src="/images/mockups/materiales/piedra.jpg" alt="" class="w-full h-full object-cover" /></div>
           <div class="h-8 bg-nickel/60"></div>
           <p class="text-xs uppercase tracking-[0.15em] mt-2 text-center">Piedra caliza</p>
         </div>
         <div class="reveal">
-          <div class="aspect-square bg-pearl border border-khaki mb-2"></div>
+          <div class="aspect-square mb-2 overflow-hidden"><img src="/images/mockups/materiales/lino.jpg" alt="" class="w-full h-full object-cover" /></div>
           <div class="h-8 bg-khaki"></div>
           <p class="text-xs uppercase tracking-[0.15em] mt-2 text-center">Lino crudo</p>
         </div>
@@ -126,7 +127,7 @@
 
     <!-- Imagen + texto alternando lado, como las citas intercaladas de Norm -->
     <div class="grid md:grid-cols-2 gap-6 px-6 md:px-10 pb-20 items-center" data-reveal-group>
-      <div class="reveal aspect-[4/5] bg-taupe/40"></div>
+      <div class="reveal aspect-[4/5] overflow-hidden"><img src="/images/mockups/proyectos/04-b.jpg" alt="" class="w-full h-full object-cover" /></div>
       <p class="reveal text-leather/80 max-w-sm">
         El roble natural de los pisos se continúa en la carpintería, dando continuidad visual
         a todo el recorrido.
@@ -137,7 +138,7 @@
         La luz de la tarde entra rasante por los ventanales orientados al poniente, marcando
         el ritmo del día dentro de la casa.
       </p>
-      <div class="reveal aspect-[4/5] bg-froth border border-khaki md:order-2 order-1"></div>
+      <div class="reveal aspect-[4/5] overflow-hidden md:order-2 order-1"><img src="/images/mockups/detalle-luz.jpg" alt="" class="w-full h-full object-cover" /></div>
     </div>
 
     <!-- Índice numerado de imágenes, cierre editorial al estilo "lista de láminas" -->
@@ -145,27 +146,27 @@
       <p class="text-center text-xs uppercase tracking-[0.2em] text-nickel mb-10 reveal">Índice de imágenes</p>
       <div class="plate-index grid grid-cols-3 md:grid-cols-6 gap-4" data-reveal-group>
         <figure class="reveal">
-          <div class="aspect-square bg-taupe/30"></div>
+          <div class="aspect-square overflow-hidden"><img src="/images/mockups/proyectos/01-a.jpg" alt="" class="w-full h-full object-cover" /></div>
           <figcaption class="text-center text-xs text-nickel mt-2">01</figcaption>
         </figure>
         <figure class="reveal">
-          <div class="aspect-square bg-khaki/50"></div>
+          <div class="aspect-square overflow-hidden"><img src="/images/mockups/proyectos/01-b.jpg" alt="" class="w-full h-full object-cover" /></div>
           <figcaption class="text-center text-xs text-nickel mt-2">02</figcaption>
         </figure>
         <figure class="reveal">
-          <div class="aspect-square bg-nickel/25"></div>
+          <div class="aspect-square overflow-hidden"><img src="/images/mockups/materiales/roble.jpg" alt="" class="w-full h-full object-cover" /></div>
           <figcaption class="text-center text-xs text-nickel mt-2">03</figcaption>
         </figure>
         <figure class="reveal">
-          <div class="aspect-square bg-chestnut/20"></div>
+          <div class="aspect-square overflow-hidden"><img src="/images/mockups/materiales/piedra.jpg" alt="" class="w-full h-full object-cover" /></div>
           <figcaption class="text-center text-xs text-nickel mt-2">04</figcaption>
         </figure>
         <figure class="reveal">
-          <div class="aspect-square bg-froth border border-khaki"></div>
+          <div class="aspect-square overflow-hidden"><img src="/images/mockups/proyectos/04-b.jpg" alt="" class="w-full h-full object-cover" /></div>
           <figcaption class="text-center text-xs text-nickel mt-2">05</figcaption>
         </figure>
         <figure class="reveal">
-          <div class="aspect-square bg-taupe/60"></div>
+          <div class="aspect-square overflow-hidden"><img src="/images/mockups/detalle-luz.jpg" alt="" class="w-full h-full object-cover" /></div>
           <figcaption class="text-center text-xs text-nickel mt-2">06</figcaption>
         </figure>
       </div>

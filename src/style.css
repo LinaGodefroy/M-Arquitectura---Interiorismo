@@ -106,22 +106,11 @@ h1, h2, h3, .font-display {
   text-shadow: 0 0 24px color-mix(in srgb, var(--color-taupe) 70%, transparent);
 }
 
-/* Resplandor que sigue al cursor dentro del hero — adaptado de digital-serenity,
-   en tonos taupe en vez de slate, y confinado al hero (no a toda la página). */
-#hero-glow {
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  left: 0;
-  top: 0;
-  border-radius: 9999px;
-  background-image: radial-gradient(circle, color-mix(in srgb, var(--color-taupe) 40%, transparent), transparent 70%);
-  filter: blur(50px);
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  pointer-events: none;
-  will-change: left, top, opacity;
-  transition: left 90ms linear, top 90ms linear, opacity 300ms ease-out;
+/* Separa el texto del hero de la foto de fondo sin tocar la imagen: una sombra
+   ajustada a cada letra/línea (no una caja ni un degradado sobre la foto). */
+.hero-text-pop {
+  filter: drop-shadow(0 1px 1px color-mix(in srgb, var(--color-leather) 12%, transparent))
+    drop-shadow(0 2px 18px color-mix(in srgb, var(--color-pearl) 55%, transparent));
 }
 
 /* Ripple al hacer click dentro del hero */
@@ -146,8 +135,3 @@ h1, h2, h3, .font-display {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  #hero-glow {
-    display: none;
-  }
-}
