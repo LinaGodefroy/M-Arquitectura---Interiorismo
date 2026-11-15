@@ -48,30 +48,15 @@
   </div>
 
   <main>
-    <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center bg-taupe/25 px-6 md:px-10 py-32 overflow-hidden" data-hero-intro>
-      <!-- Motivo de plano arquitectónico: grid + esquinas, muy sutil. Cuando haya foto real
-           de fondo, esto queda flotando encima a baja opacidad. -->
-      <svg class="absolute inset-0 w-full h-full pointer-events-none text-khaki" aria-hidden="true">
-        <defs>
-          <pattern id="heroGrid" width="56" height="56" patternUnits="userSpaceOnUse">
-            <path d="M 56 0 L 0 0 0 56" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#heroGrid)" />
-      </svg>
-      <div class="absolute top-6 left-6 w-8 h-8 border-t border-l border-khaki"></div>
-      <div class="absolute top-6 right-6 w-8 h-8 border-t border-r border-khaki"></div>
-      <div class="absolute bottom-6 left-6 w-8 h-8 border-b border-l border-khaki"></div>
-      <div class="absolute bottom-6 right-6 w-8 h-8 border-b border-r border-khaki"></div>
+    <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 md:px-10 py-32 overflow-hidden" data-hero-intro>
+      <img src="/images/mockups/hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
 
-      <div id="hero-glow" aria-hidden="true"></div>
-
-      <p data-hero-item data-split-words class="relative text-xs uppercase tracking-[0.25em] text-nickel mb-6">Arquitectura · Interiorismo</p>
+      <p data-hero-item data-split-words class="hero-text-pop relative text-xs uppercase tracking-[0.25em] text-leather/80 mb-6">Arquitectura · Interiorismo</p>
       <div class="relative inline-block max-w-full">
-        <h1 data-hero-item data-split-words data-break-after="3" class="relative font-display text-4xl sm:text-[clamp(2.25rem,1rem+3.5vw,4.5rem)] leading-tight sm:whitespace-nowrap">
+        <h1 data-hero-item data-split-words data-break-after="3" class="hero-text-pop relative font-display text-4xl sm:text-[clamp(2.25rem,1rem+3.5vw,4.5rem)] leading-tight sm:whitespace-nowrap">
           Donde la materia se vuelve espacio.
         </h1>
-        <span id="hero-underline" class="block absolute left-0 -bottom-3 h-px w-0 bg-gradient-to-r from-transparent via-nickel to-transparent"></span>
+        <span id="hero-underline" class="hero-text-pop block absolute left-0 -bottom-3 h-px w-0 bg-gradient-to-r from-transparent via-leather to-transparent"></span>
       </div>
     </section>
 
@@ -84,14 +69,20 @@
         Una mirada rápida a lo último del estudio. El recorrido completo está en Proyectos.
       </p>
       <div class="grid md:grid-cols-3 gap-6" data-reveal-group>
-        <a href="/proyectos/proyecto-01/" class="reveal block aspect-[4/5] bg-taupe/40 p-5 flex items-end press">
-          <span class="font-display text-xl">Proyecto 01</span>
+        <a href="/proyectos/proyecto-01/" class="reveal relative block aspect-[4/5] p-5 flex items-end press overflow-hidden">
+          <img src="/images/mockups/proyectos/01-a.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-leather/60 via-transparent to-transparent"></div>
+          <span class="relative font-display text-xl text-pearl">Proyecto 01</span>
         </a>
-        <a href="/proyectos/proyecto-01/" class="reveal block aspect-[4/5] bg-khaki/60 p-5 flex items-end press">
-          <span class="font-display text-xl">Proyecto 02</span>
+        <a href="/proyectos/proyecto-01/" class="reveal relative block aspect-[4/5] p-5 flex items-end press overflow-hidden">
+          <img src="/images/mockups/proyectos/04-a.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-leather/60 via-transparent to-transparent"></div>
+          <span class="relative font-display text-xl text-pearl">Proyecto 02</span>
         </a>
-        <a href="/proyectos/proyecto-01/" class="reveal block aspect-[4/5] bg-nickel/30 p-5 flex items-end press">
-          <span class="font-display text-xl">Proyecto 03</span>
+        <a href="/proyectos/proyecto-01/" class="reveal relative block aspect-[4/5] p-5 flex items-end press overflow-hidden">
+          <img src="/images/mockups/proyectos/02-a.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-leather/60 via-transparent to-transparent"></div>
+          <span class="relative font-display text-xl text-pearl">Proyecto 03</span>
         </a>
       </div>
     </section>

@@ -61,21 +61,6 @@ function splitWords(el) {
   return el.querySelectorAll(".word-animate");
 }
 
-// Soft glow that follows the pointer inside the hero only (not the whole page).
-function setupHeroGlow(hero) {
-  const glow = hero.querySelector("#hero-glow");
-  if (!glow) return;
-  hero.addEventListener("mousemove", (e) => {
-    const r = hero.getBoundingClientRect();
-    glow.style.left = `${e.clientX - r.left}px`;
-    glow.style.top = `${e.clientY - r.top}px`;
-    glow.style.opacity = "1";
-  });
-  hero.addEventListener("mouseleave", () => {
-    glow.style.opacity = "0";
-  });
-}
-
 // A small ripple on click, confined to the hero.
 function setupHeroRipple(hero) {
   hero.addEventListener("click", (e) => {
@@ -122,7 +107,6 @@ function setupMotion() {
         tl.fromTo(underline, { width: "0%" }, { width: "100%", duration: 1, ease: "power2.out" }, "-=0.1");
       }
 
-      setupHeroGlow(hero);
       setupHeroRipple(hero);
     }
 
