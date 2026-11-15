@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <title>Proyecto 01 — Marifer Arquitectura e Interiorismo</title>
+</head>
+<body class="bg-pearl text-leather font-sans">
+  <header class="fixed top-0 inset-x-0 z-40 flex items-center justify-between px-6 md:px-10 py-5 bg-pearl/80 backdrop-blur-sm border-b border-khaki/60">
+    <a href="/" class="font-display text-lg tracking-wide">MARIFER</a>
+    <button data-menu-toggle class="font-sans text-xs uppercase tracking-[0.2em] press">Menú</button>
+  </header>
+
+  <div id="menu-overlay" aria-hidden="true">
+    <button data-menu-close class="absolute top-6 right-6 md:right-10 text-xs uppercase tracking-[0.2em] text-leather press">Cerrar</button>
+    <nav class="flex flex-col gap-1 max-w-xl mx-auto w-full py-16">
+      <a href="/" class="font-display text-4xl md:text-6xl text-leather tracking-wide pb-6 mb-8 border-b border-leather/20">MARIFER</a>
+      <a href="/proyectos/" class="font-display text-3xl md:text-5xl text-leather py-2">Proyectos</a>
+
+      <div>
+        <button type="button" data-accordion-toggle aria-expanded="false" aria-controls="menu-arquitectura" class="w-full flex items-center justify-between font-display text-3xl md:text-5xl text-leather py-2 press">
+          <span>Arquitectura</span>
+          <span class="accordion-chevron text-2xl font-sans font-light">+</span>
+        </button>
+        <div id="menu-arquitectura" class="accordion-panel pl-4">
+          <a href="/servicios/arquitectura/#residencial" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Vivienda residencial</a>
+          <a href="/servicios/arquitectura/#comercial" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Proyectos comerciales</a>
+          <a href="/servicios/arquitectura/#direccion" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Dirección de obra</a>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" data-accordion-toggle aria-expanded="false" aria-controls="menu-interiorismo" class="w-full flex items-center justify-between font-display text-3xl md:text-5xl text-leather py-2 press">
+          <span>Interiorismo</span>
+          <span class="accordion-chevron text-2xl font-sans font-light">+</span>
+        </button>
+        <div id="menu-interiorismo" class="accordion-panel pl-4">
+          <a href="/servicios/interiorismo/#residencial" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Interiorismo residencial</a>
+          <a href="/servicios/interiorismo/#comercial" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Interiorismo comercial</a>
+          <a href="/servicios/interiorismo/#reforma" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Reforma de interiores</a>
+        </div>
+      </div>
+
+      <a href="/estudio/" class="font-display text-3xl md:text-5xl text-leather py-2">Estudio</a>
+      <a href="/contacto/" class="font-display text-3xl md:text-5xl text-leather py-2">Contacto</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero: imagen + breadcrumb + título superpuestos, como en normcph.com -->
+    <div class="relative w-full aspect-[4/5] md:aspect-[16/9] bg-taupe/40">
+      <div class="absolute inset-0 bg-gradient-to-t from-leather/70 via-leather/10 to-transparent"></div>
+      <div class="absolute inset-x-0 bottom-0 px-6 md:px-10 pb-10 text-leather">
+        <p class="text-xs uppercase tracking-[0.2em] mb-3">Arquitectura · Residencial</p>
+        <h1 class="font-display text-4xl md:text-6xl">Proyecto 01</h1>
+      </div>
+    </div>
+
+    <p class="max-w-lg mx-auto text-center font-display text-xl md:text-2xl italic leading-snug px-6 pt-14 pb-2 reveal">
+      "Aquí, el lujo no está en la abundancia, sino en la calma: pocos materiales, bien
+      elegidos, y mucho espacio para la luz."
+    </p>
+    <p class="text-center text-xs text-nickel/70 italic pb-12">
+      Texto de ejemplo — se sustituye por la frase real del proyecto.
+    </p>
+
+    <!-- Ficha técnica centrada y apilada -->
+    <dl class="flex flex-col items-center gap-8 pb-16 reveal">
+      <div class="text-center">
+        <dt class="text-xs uppercase tracking-[0.2em] text-nickel mb-1">Ubicación</dt>
+        <dd>Pendiente</dd>
+      </div>
+      <div class="text-center">
+        <dt class="text-xs uppercase tracking-[0.2em] text-nickel mb-1">Categoría</dt>
+        <dd>Residencial</dd>
+      </div>
+      <div class="text-center">
+        <dt class="text-xs uppercase tracking-[0.2em] text-nickel mb-1">Año</dt>
+        <dd>Pendiente</dd>
+      </div>
+      <div class="text-center">
+        <dt class="text-xs uppercase tracking-[0.2em] text-nickel mb-1">Superficie</dt>
+        <dd>Pendiente</dd>
+      </div>
+    </dl>
+
+    <div class="max-w-2xl mx-auto px-6 md:px-10 space-y-6 pb-4 reveal">
+      <p>
+        Este proyecto nace de un terreno con vistas que pedían protagonismo y un programa
+        doméstico que necesitaba calma. La propuesta ordena los espacios servidores en un
+        volumen compacto, liberando el resto de la planta para la vida cotidiana.
+      </p>
+      <p>
+        <strong>Materiales:</strong> roble natural en los pisos, piedra caliza en los núcleos
+        húmedos y lino crudo en las cortinas — una paleta reducida que deja que la luz y el
+        tiempo hagan el resto del trabajo.
+      </p>
+    </div>
+    <p class="text-center text-xs text-nickel/70 italic max-w-2xl mx-auto px-6 md:px-10 pb-20">
+      Texto de ejemplo — se sustituye por la descripción y los materiales reales del proyecto.
+    </p>
+
+    <!-- Materialidad propia de este proyecto: foto + swatch + nombre del material.
+         Antes vivía como sección genérica en Estudio; ahora es específica de cada proyecto. -->
+    <section class="px-6 md:px-10 pb-20">
+      <p class="text-center text-xs uppercase tracking-[0.2em] text-nickel mb-10 reveal">Materialidad</p>
+      <div class="grid grid-cols-3 gap-4 md:gap-6" data-reveal-group>
+        <div class="reveal">
+          <div class="aspect-square bg-khaki mb-2"></div>
+          <div class="h-8 bg-taupe"></div>
+          <p class="text-xs uppercase tracking-[0.15em] mt-2 text-center">Roble natural</p>
+        </div>
+        <div class="reveal">
+          <div class="aspect-square bg-froth border border-khaki mb-2"></div>
+          <div class="h-8 bg-nickel/60"></div>
+          <p class="text-xs uppercase tracking-[0.15em] mt-2 text-center">Piedra caliza</p>
+        </div>
+        <div class="reveal">
+          <div class="aspect-square bg-pearl border border-khaki mb-2"></div>
+          <div class="h-8 bg-khaki"></div>
+          <p class="text-xs uppercase tracking-[0.15em] mt-2 text-center">Lino crudo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Imagen + texto alternando lado, como las citas intercaladas de Norm -->
+    <div class="grid md:grid-cols-2 gap-6 px-6 md:px-10 pb-20 items-center" data-reveal-group>
+      <div class="reveal aspect-[4/5] bg-taupe/40"></div>
+      <p class="reveal text-leather/80 max-w-sm">
+        El roble natural de los pisos se continúa en la carpintería, dando continuidad visual
+        a todo el recorrido.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 px-6 md:px-10 pb-24 items-center" data-reveal-group>
+      <p class="reveal text-leather/80 max-w-sm md:order-1 order-2">
+        La luz de la tarde entra rasante por los ventanales orientados al poniente, marcando
+        el ritmo del día dentro de la casa.
+      </p>
+      <div class="reveal aspect-[4/5] bg-froth border border-khaki md:order-2 order-1"></div>
+    </div>
+
+    <!-- Índice numerado de imágenes, cierre editorial al estilo "lista de láminas" -->
+    <div class="px-6 md:px-10 pb-20">
+      <p class="text-center text-xs uppercase tracking-[0.2em] text-nickel mb-10 reveal">Índice de imágenes</p>
+      <div class="plate-index grid grid-cols-3 md:grid-cols-6 gap-4" data-reveal-group>
+        <figure class="reveal">
+          <div class="aspect-square bg-taupe/30"></div>
+          <figcaption class="text-center text-xs text-nickel mt-2">01</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="aspect-square bg-khaki/50"></div>
+          <figcaption class="text-center text-xs text-nickel mt-2">02</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="aspect-square bg-nickel/25"></div>
+          <figcaption class="text-center text-xs text-nickel mt-2">03</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="aspect-square bg-chestnut/20"></div>
+          <figcaption class="text-center text-xs text-nickel mt-2">04</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="aspect-square bg-froth border border-khaki"></div>
+          <figcaption class="text-center text-xs text-nickel mt-2">05</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="aspect-square bg-taupe/60"></div>
+          <figcaption class="text-center text-xs text-nickel mt-2">06</figcaption>
+        </figure>
+      </div>
+      <p class="text-center text-xs text-nickel mt-6">
+        Placeholders — se completa con la fotografía real y su numeración definitiva.
+      </p>
+    </div>
+
+    <div class="px-6 md:px-10 pb-24 text-center">
+      <a href="/proyectos/" class="press text-xs uppercase tracking-[0.2em]">← Volver a proyectos</a>
+    </div>
+  </main>
+
+  <footer class="px-6 md:px-10 pt-16 pb-10 text-sm">
+    <div class="flex flex-col md:flex-row md:justify-between gap-10 mb-12">
+      <a href="/" class="font-display text-lg tracking-wide">MARIFER</a>
+      <div class="flex flex-wrap gap-10 md:gap-20">
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-leather mb-3">Explorar</p>
+          <ul class="space-y-2">
+            <li><a href="/" class="press text-nickel hover:text-leather">Inicio</a></li>
+            <li><a href="/proyectos/" class="press text-nickel hover:text-leather">Proyectos</a></li>
+            <li><a href="/servicios/arquitectura/" class="press text-nickel hover:text-leather">Arquitectura</a></li>
+            <li><a href="/servicios/interiorismo/" class="press text-nickel hover:text-leather">Interiorismo</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-leather mb-3">Estudio</p>
+          <ul class="space-y-2">
+            <li><a href="/estudio/" class="press text-nickel hover:text-leather">Sobre mí</a></li>
+            <li><a href="/contacto/" class="press text-nickel hover:text-leather">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-leather mb-3">Síguenos</p>
+          <ul class="space-y-2 text-nickel">
+            <li>Instagram — pendiente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-khaki pt-6 flex flex-col md:flex-row justify-between gap-4">
+      <p class="font-display text-base">Marifer Arquitectura e Interiorismo</p>
+      <p class="text-nickel">Contacto pendiente de confirmar</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

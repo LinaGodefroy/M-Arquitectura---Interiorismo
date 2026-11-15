@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <title>Marifer — Arquitectura e Interiorismo</title>
+</head>
+<body class="bg-pearl text-leather font-sans">
+  <header class="fixed top-0 inset-x-0 z-40 flex items-center justify-between px-6 md:px-10 py-5 bg-pearl/80 backdrop-blur-sm border-b border-khaki/60">
+    <a href="/" class="font-display text-lg tracking-wide">MARIFER</a>
+    <button data-menu-toggle class="font-sans text-xs uppercase tracking-[0.2em] press">Menú</button>
+  </header>
+
+  <div id="menu-overlay" aria-hidden="true">
+    <button data-menu-close class="absolute top-6 right-6 md:right-10 text-xs uppercase tracking-[0.2em] text-leather press">Cerrar</button>
+    <nav class="flex flex-col gap-1 max-w-xl mx-auto w-full py-16">
+      <a href="/" class="font-display text-4xl md:text-6xl text-leather tracking-wide pb-6 mb-8 border-b border-leather/20">MARIFER</a>
+      <a href="/proyectos/" class="font-display text-3xl md:text-5xl text-leather py-2">Proyectos</a>
+
+      <div>
+        <button type="button" data-accordion-toggle aria-expanded="false" aria-controls="menu-arquitectura" class="w-full flex items-center justify-between font-display text-3xl md:text-5xl text-leather py-2 press">
+          <span>Arquitectura</span>
+          <span class="accordion-chevron text-2xl font-sans font-light">+</span>
+        </button>
+        <div id="menu-arquitectura" class="accordion-panel pl-4">
+          <a href="/servicios/arquitectura/#residencial" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Vivienda residencial</a>
+          <a href="/servicios/arquitectura/#comercial" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Proyectos comerciales</a>
+          <a href="/servicios/arquitectura/#direccion" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Dirección de obra</a>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" data-accordion-toggle aria-expanded="false" aria-controls="menu-interiorismo" class="w-full flex items-center justify-between font-display text-3xl md:text-5xl text-leather py-2 press">
+          <span>Interiorismo</span>
+          <span class="accordion-chevron text-2xl font-sans font-light">+</span>
+        </button>
+        <div id="menu-interiorismo" class="accordion-panel pl-4">
+          <a href="/servicios/interiorismo/#residencial" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Interiorismo residencial</a>
+          <a href="/servicios/interiorismo/#comercial" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Interiorismo comercial</a>
+          <a href="/servicios/interiorismo/#reforma" class="block text-sm md:text-base uppercase tracking-[0.15em] text-leather/70 py-2">Reforma de interiores</a>
+        </div>
+      </div>
+
+      <a href="/estudio/" class="font-display text-3xl md:text-5xl text-leather py-2">Estudio</a>
+      <a href="/contacto/" class="font-display text-3xl md:text-5xl text-leather py-2">Contacto</a>
+    </nav>
+  </div>
+
+  <main>
+    <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center bg-taupe/25 px-6 md:px-10 py-32 overflow-hidden" data-hero-intro>
+      <!-- Motivo de plano arquitectónico: grid + esquinas, muy sutil. Cuando haya foto real
+           de fondo, esto queda flotando encima a baja opacidad. -->
+      <svg class="absolute inset-0 w-full h-full pointer-events-none text-khaki" aria-hidden="true">
+        <defs>
+          <pattern id="heroGrid" width="56" height="56" patternUnits="userSpaceOnUse">
+            <path d="M 56 0 L 0 0 0 56" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#heroGrid)" />
+      </svg>
+      <div class="absolute top-6 left-6 w-8 h-8 border-t border-l border-khaki"></div>
+      <div class="absolute top-6 right-6 w-8 h-8 border-t border-r border-khaki"></div>
+      <div class="absolute bottom-6 left-6 w-8 h-8 border-b border-l border-khaki"></div>
+      <div class="absolute bottom-6 right-6 w-8 h-8 border-b border-r border-khaki"></div>
+
+      <div id="hero-glow" aria-hidden="true"></div>
+
+      <p data-hero-item data-split-words class="relative text-xs uppercase tracking-[0.25em] text-nickel mb-6">Arquitectura · Interiorismo</p>
+      <div class="relative inline-block max-w-full">
+        <h1 data-hero-item data-split-words data-break-after="3" class="relative font-display text-4xl sm:text-[clamp(2.25rem,1rem+3.5vw,4.5rem)] leading-tight sm:whitespace-nowrap">
+          Donde la materia se vuelve espacio.
+        </h1>
+        <span id="hero-underline" class="block absolute left-0 -bottom-3 h-px w-0 bg-gradient-to-r from-transparent via-nickel to-transparent"></span>
+      </div>
+    </section>
+
+    <section class="px-6 md:px-10 py-20 md:py-28">
+      <div class="flex items-end justify-between mb-2 reveal">
+        <h2 class="font-display text-2xl md:text-3xl">Proyectos recientes</h2>
+        <a href="/proyectos/" class="text-xs uppercase tracking-[0.2em] press">Ver todos →</a>
+      </div>
+      <p class="text-nickel max-w-md mb-10 reveal">
+        Una mirada rápida a lo último del estudio. El recorrido completo está en Proyectos.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6" data-reveal-group>
+        <a href="/proyectos/proyecto-01/" class="reveal block aspect-[4/5] bg-taupe/40 p-5 flex items-end press">
+          <span class="font-display text-xl">Proyecto 01</span>
+        </a>
+        <a href="/proyectos/proyecto-01/" class="reveal block aspect-[4/5] bg-khaki/60 p-5 flex items-end press">
+          <span class="font-display text-xl">Proyecto 02</span>
+        </a>
+        <a href="/proyectos/proyecto-01/" class="reveal block aspect-[4/5] bg-nickel/30 p-5 flex items-end press">
+          <span class="font-display text-xl">Proyecto 03</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="px-6 md:px-10 py-20 md:py-28 bg-froth">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="reveal">
+          <h2 class="font-display text-3xl md:text-5xl mb-4">
+            Dos disciplinas, una misma mirada.
+          </h2>
+          <p class="text-leather/80 max-w-sm">
+            Arquitectura e interiorismo se piensan juntos desde el primer boceto: el espacio
+            y lo que lo habita no se diseñan por separado.
+          </p>
+        </div>
+        <div class="grid gap-6 reveal">
+          <a href="/servicios/arquitectura/" class="press flex items-center justify-between border-b border-khaki pb-4">
+            <span class="font-display text-xl">Arquitectura</span>
+            <span class="text-xs uppercase tracking-[0.2em]">Ver →</span>
+          </a>
+          <a href="/servicios/interiorismo/" class="press flex items-center justify-between border-b border-khaki pb-4">
+            <span class="font-display text-xl">Interiorismo</span>
+            <span class="text-xs uppercase tracking-[0.2em]">Ver →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 md:px-10 py-24 md:py-32 text-center">
+      <h2 class="font-display text-3xl md:text-5xl max-w-2xl mx-auto reveal">
+        ¿Tienes un proyecto en mente?
+      </h2>
+      <p class="text-leather/80 max-w-md mx-auto mt-4 reveal">
+        Cuéntanos qué estás imaginando. Lo primero siempre es una conversación.
+      </p>
+      <a href="/contacto/" class="press inline-block mt-8 border border-leather px-8 py-3 text-xs uppercase tracking-[0.2em] reveal">
+        Hablemos
+      </a>
+    </section>
+  </main>
+
+  <footer class="px-6 md:px-10 pt-16 pb-10 text-sm">
+    <div class="flex flex-col md:flex-row md:justify-between gap-10 mb-12">
+      <a href="/" class="font-display text-lg tracking-wide">MARIFER</a>
+      <div class="flex flex-wrap gap-10 md:gap-20">
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-leather mb-3">Explorar</p>
+          <ul class="space-y-2">
+            <li><a href="/" class="press text-nickel hover:text-leather">Inicio</a></li>
+            <li><a href="/proyectos/" class="press text-nickel hover:text-leather">Proyectos</a></li>
+            <li><a href="/servicios/arquitectura/" class="press text-nickel hover:text-leather">Arquitectura</a></li>
+            <li><a href="/servicios/interiorismo/" class="press text-nickel hover:text-leather">Interiorismo</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-leather mb-3">Estudio</p>
+          <ul class="space-y-2">
+            <li><a href="/estudio/" class="press text-nickel hover:text-leather">Sobre mí</a></li>
+            <li><a href="/contacto/" class="press text-nickel hover:text-leather">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-leather mb-3">Síguenos</p>
+          <ul class="space-y-2 text-nickel">
+            <li>Instagram — pendiente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-khaki pt-6 flex flex-col md:flex-row justify-between gap-4">
+      <p class="font-display text-base">Marifer Arquitectura e Interiorismo</p>
+      <p class="text-nickel">Contacto pendiente de confirmar</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
